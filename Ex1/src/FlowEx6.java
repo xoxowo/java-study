@@ -22,10 +22,10 @@ public class FlowEx6 {
             case 8:
                 System.out.println("예약이 가능한 달입니다.");
                 break;
-            case 9: case 10: case 11:
+            case 9: case 10: case 11: // case문은 한줄에 작성할 수 있다. 
                 System.out.println("현재 예약이 가능한 달이 아닙니다.");
                 break;
-            case 12: case 1 : case 2 :  // case문은 한줄에 붙여서도 사용가능하다.  
+            case 12: case 1 : case 2 :
                 System.out.println("현재 예약이 가능한 달이 아닙니다.");
                 break; //마지막 문장에는 break를 사용할 필요가 없다.
         }
