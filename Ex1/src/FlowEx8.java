@@ -1,4 +1,4 @@
-import org.w3c.dom.ranges.Range;
+import java.util.Scanner;
 
 public class FlowEx8 {
     public static void main(String[] args) {
@@ -29,6 +29,29 @@ public class FlowEx8 {
 
         for (int i=1; i<=10; i++){
             System.out.printf("%d \t %d \t %d \t %d \t %d \t %d \t %d%n", i,2*i, 2*i-1,i*i ,11-i, i%3, i/3 );
+        }
+
+        // 중첩 for 문 연습
+
+        for (int i=1; i<=5; i++){
+            for (int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        int num = 0;
+
+        System.out.print("*을 출력할 라인 수를 입력해주세요. >");
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine();
+        num = Integer.parseInt(tmp);
+        
+        for (int i=0; i <num; i++) {
+            for (int j=0; j<=i; j ++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 }
