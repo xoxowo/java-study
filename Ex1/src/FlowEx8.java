@@ -17,5 +17,10 @@ public class FlowEx8 {
             sum += i ;                          // %n은 줄바꿈..
             System.out.printf("1부터 %2d 까지의 합은 :%2d%n", i,sum);
         }
+        System.out.println("-------------------------");
+
+        for (int i=1, j=10; i <=10; i++, j--) {
+            System.out.printf("%d \t %d%n", i, j);
+        }
     }
 }
