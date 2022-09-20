@@ -53,5 +53,11 @@ public class FlowEx8 {
             }
             System.out.println();
         }
+        // 간단 구구단...연습
+        // 중첩 for 문 내부에 문장이 하나일 때 {} 생략할 수 있다.
+        for (int i=2; i<=9; i++) {
+            for (int j=1; j<=9; j++)
+                System.out.printf("%d x %d = %d%n", i, j, i*j);
+        }
     }
 }
