@@ -30,7 +30,7 @@ public class FlowEx8 {
         for (int i=1; i<=10; i++){
             System.out.printf("%d \t %d \t %d \t %d \t %d \t %d \t %d%n", i,2*i, 2*i-1,i*i ,11-i, i%3, i/3 );
         }
-
+        System.out.println("-----------------------------------------------------");
         // 중첩 for 문 연습
 
         for (int i=1; i<=5; i++){
@@ -58,6 +58,19 @@ public class FlowEx8 {
         for (int i=2; i<=9; i++) {
             for (int j=1; j<=9; j++)
                 System.out.printf("%d x %d = %d%n", i, j, i*j);
+        }
+        System.out.println("-----------------------------------------------------");
+        // 중첩 for문 내부 if문 예제
+
+        for (int i=1; i<=5; i++){
+            for (int j=1; j<=5; j++){
+                if (i==j) {
+                    System.out.printf("[%d, %d]", i, j);
+                } //else {
+                //     System.out.printf("%5c",' ');
+                // }
+            }
+            System.out.println();
         }
     }
 }
