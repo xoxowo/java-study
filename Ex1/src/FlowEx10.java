@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class FlowEx10 {
     public static void main(String[] args){
         /*
@@ -18,6 +20,28 @@ public class FlowEx10 {
         while ((sum += ++j) <=100) {
             System.out.printf("%d - %d%n",j, sum);
         }
+        /*
+        do while 기존 while 문과 비슷
+        do {
+            //조건식의 연산 결과가 참일 때 수행될 문장
+        } while (조건식);
+         */
 
+        int input = 0 , answer =0;
+
+        answer = (int)(Math.random()*100) +1;
+        Scanner scanner = new Scanner(System.in);
+
+        do {
+            System.out.println("1과 100사이의 정수를 입력하세요. >");
+            input = scanner.nextInt();
+            
+            if (input > answer) {
+                System.out.println("조건을 만족하지 않습니다. 다시 입력해주세요.");
+            } else if (input <answer) {
+                System.out.println("조건을 만족하지 않습니다. 다시 입력해주세요.");
+            }
+        } while (input!=answer);
+        System.out.println("정답입니다.");
     }
 }
