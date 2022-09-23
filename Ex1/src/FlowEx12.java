@@ -34,5 +34,10 @@ public class FlowEx12 {
         for (int i =0; i < iarr.length; i++){
             System.out.println(iarr[i]);
         }
+        System.out.println("------------------");  
+        // 그냥 배열 출력 시 '타입@주소' 형식으로 출력된다.
+        System.out.println(iarr);
+
+        //배열을 복사할 시 for문보다 System.arraycopy()를 사용하는 것이 요율적이다.
     }
 }
