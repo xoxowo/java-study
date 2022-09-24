@@ -31,5 +31,25 @@ public class FlowEx13 {
     System.out.println("최대값 :" +max);
     System.out.println("최소값 :" +min);
 
+    // 3. 요소의 순서를 반복해서 섞기 (바꾸기)
+    int[] numArr = new int[10]; // 배열선언하면서 초기화
+
+    for (int i = 0; i< numArr.length; i++){
+        numArr[i]=i; //배열을 0~9 for문사용하여 초기화 < 값을 넣어줌
+        System.out.println(numArr[i]);
+    }
+    System.out.println();
+
+    for (int i = 0; i <100; i++){
+        int n = (int)(Math.random() * 10); //0~9 중의 한 값을 임의로 얻음
+        int tmp = numArr[0];  // 45~47줄은 numArr[0]과 numArr[n]의 값을 서로 바꾸는것
+        numArr[0] = numArr[n];
+        numArr[n] = tmp;
+    }
+    
+    for (int i =0; i< numArr.length; i++){
+        System.out.println(numArr[i]);
+    }
+
     }
 }
