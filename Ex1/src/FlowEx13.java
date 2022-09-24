@@ -14,5 +14,22 @@ public class FlowEx13 {
 
     System.out.println("총점:" + sum);
     System.out.println("평균:" + average);
+
+    // 2. 최대값과 최소값
+    int[] number = {32,6,11,999};
+    
+    int max = number[0]; // 배열의 첫 번째 값으로 최대값초기화
+    int min = number[0]; // 배열의 첫 번째 값으로 최대값초기화
+
+    for (int i = 0; i <number.length; i++){
+        if (number[i] >max) {
+            max = number[i];
+        } else if (number[i] <min) {
+            min = number[i];
+        }
+    }
+    System.out.println("최대값 :" +max);
+    System.out.println("최소값 :" +min);
+
     }
 }
