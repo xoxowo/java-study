@@ -55,33 +55,29 @@ public class FlowEx13 {
     // 4. 번호를 랜덤으로 생성하는 예제
     int[] ball = new int[45];
     // 배열의 인덱스는 0부터 시작하기 때문 
-    // for(int i = 0; i<ball.length; i++) {
-    //     ball[i]= i+1;
-    //     System.out.println(ball[i]);
-    // }
-    // int tmp = 0;
-    // int j = 0;
-
-    for(int i = 1; i<=45; i++) {
+    for(int i = 0; i<ball.length; i++) {
         ball[i]= i+1;
         System.out.println(ball[i]);
     }
+    int tmp = 0;
+    int j = 0;
 
-    // for(int i = 0; i<ball.length; i++) {
+    // for(int i = 0; i<46; i++) {
     //     ball[i]= i+1;
+    //     System.out.println(ball[i]);
     // }
-    // int tmp = 0;
-    // int j = 0;
+    // System.out.println("----------------------------");
+    // 범위가 45인데 
 
-    // for (int i =0; i<6; i++){
-    //     j = (int)(Math.random() * 45);
-    //     tmp= ball[i];       //64줄부터 66은ball[i] 값과 ball[j]값을 서로 바꿈.
-    //     ball[i] = ball[j];
-    //     ball[j] = tmp;
-    // }
-
-    // for (int i =0; i <6; i++){
-    //     System.out.printf("ball[%d]=%d%n",i,ball[i]);
-    // }
+    for (int i =0; i<6; i++){
+        j = (int)(Math.random() * 45);
+        tmp= ball[i];       //64줄부터 66은ball[i] 값과 ball[j]값을 서로 바꿈.
+        ball[i] = ball[j];
+        ball[j] = tmp;
+    }
+    System.out.println("----------------------------");
+    for (int i =0; i <6; i++){
+        System.out.printf("ball[%d]=%d%n",i,ball[i]);
+    }
     }
 }
