@@ -55,13 +55,17 @@ public class FlowEx13 {
     // 4. 번호를 랜덤으로 생성하는 예제
     int[] ball = new int[45];
     // 배열의 인덱스는 0부터 시작하기 때문 
-    for(int i = 0; i<ball.length; i++) {
+    // for(int i = 0; i<ball.length; i++) {
+    //     ball[i]= i+1;
+    //     System.out.println(ball[i]);
+    // }
+    // int tmp = 0;
+    // int j = 0;
+
+    for(int i = 1; i<=45; i++) {
         ball[i]= i+1;
         System.out.println(ball[i]);
     }
-    int tmp = 0;
-    int j = 0;
-
 
     // for(int i = 0; i<ball.length; i++) {
     //     ball[i]= i+1;
