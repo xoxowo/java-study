@@ -32,6 +32,15 @@ public class FlowEx14 {
         System.out.println("binary:" + result);
 
         // Strng 객체는 읽을 수만 있고 내용을 변경 할 수 없다.
+
+        String src ="ABCDE";
+        
+        for (int i=0; i<src.length(); i++){
+            char ch = src.charAt(i);
+            System.out.println("src.charAt("+i+")"+ ch);
+        }
+        char[] chArr = src.toCharArray();
+        System.out.println(chArr);
     }
 
 }
