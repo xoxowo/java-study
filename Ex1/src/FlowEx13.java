@@ -1,3 +1,7 @@
+import java.util.Arrays;
+
+import javax.swing.text.AbstractDocument.BranchElement;
+
 public class FlowEx13 {
     public static void main(String[] args) {
     // 배열 활용 예제 
@@ -14,7 +18,7 @@ public class FlowEx13 {
 
     System.out.println("총점:" + sum);
     System.out.println("평균:" + average);
-
+    System.out.println("----------------------------");
     // 2. 최대값과 최소값
     int[] number = {32,6,11,999};
     
@@ -31,6 +35,7 @@ public class FlowEx13 {
     System.out.println("최대값 :" +max);
     System.out.println("최소값 :" +min);
 
+    System.out.println("----------------------------");
     // 3. 요소의 순서를 반복해서 섞기 (바꾸기)
     int[] numArr = new int[10]; // 배열선언하면서 초기화
 
@@ -66,8 +71,6 @@ public class FlowEx13 {
     //     ball[i]= i+1;
     //     System.out.println(ball[i]);
     // }
-    // System.out.println("----------------------------");
-    // 범위가 45인데 
 
     for (int i =0; i<6; i++){
         j = (int)(Math.random() * 45);
@@ -75,9 +78,46 @@ public class FlowEx13 {
         ball[i] = ball[j];
         ball[j] = tmp;
     }
-    System.out.println("----------------------------");
     for (int i =0; i <6; i++){
         System.out.printf("ball[%d]=%d%n",i,ball[i]);
+    }
+    System.out.println("----------------------------");
+    // 5. Arrays.toString() 사용
+
+    int[] code = {-1,-32,4,100};
+    int[] arr = new int[10];
+
+    for (int i =0; i<arr.length; i++){
+        int tmps = (int)(Math.random()*code.length);
+        arr[i]= code[tmps];
+    }
+    System.out.println(Arrays.toString(arr));
+
+    System.out.println("----------------------------");
+    // 6. 
+    int[] bArry = new int[10];
+    
+    for (int i =0; i <bArry.length; i++) {
+        System.out.print(bArry[i]= (int)(Math.random()*10));
+    }
+    System.out.println();
+
+    for (int i=0; i<bArry.length; i++) {
+        boolean changed = false;
+
+        for (int l=0; l<bArry.length-1-i; l++) {
+            if (bArry[l] >bArry[l+1]) {
+                int tmpp = bArry[l];
+                bArry[l] = bArry[l+1];
+                bArry[l+1] = tmpp;
+                changed = true;
+            }
+        }
+
+        if (!changed) break;
+        for (int k = 0; k<bArry.length; k++)
+            System.out.print(bArry[k]);
+        System.out.println();
     }
     }
 }
