@@ -11,6 +11,25 @@ public class FlowEx14 {
         animals[0] = "bear";
         for (String str : animals) //향상된 for문 사용
             System.out.println((str));
+
+        //char 배열과 String 클래스 `
+
+        char[] hex = {'C', 'A', 'F', 'E'};    
+        String[] binary = {"0000", "0001", "0011",
+                           "0100", "0101", "0111",
+                           "1000", "1010", "1011",
+                           "1100", "1101", "1111"};
+        String result = "";
+        
+        for (int i =0; i<hex.length; i++){
+            if (hex[i] >= '0' && hex[i] <='9') {
+                result +=binary[hex[i]-'0'];
+            } else {
+                result +=binary[hex[i]-'A'+10];
+            }
+        }
+        System.out.println("hex:" +new String(hex));
+        System.out.println("binary:" + result);
     }
 
 }
