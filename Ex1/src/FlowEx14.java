@@ -30,6 +30,8 @@ public class FlowEx14 {
         }
         System.out.println("hex:" +new String(hex));
         System.out.println("binary:" + result);
+
+        // Strng 객체는 읽을 수만 있고 내용을 변경 할 수 없다.
     }
 
 }
