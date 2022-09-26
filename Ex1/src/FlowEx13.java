@@ -119,5 +119,22 @@ public class FlowEx13 {
             System.out.print(bArry[k]);
         System.out.println();
     }
+    System.out.println("----------------------------");
+    // 7. 
+    int[] cArr = new int[10];
+    int[] dArr = new int[10];
+
+    for (int i = 0; i<cArr.length; i++){
+        cArr[i] = (int)(Math.random()*10);
+        System.out.print(cArr[i]);
+    }
+    System.out.println();
+
+    for (int i = 0; i<cArr.length; i++){
+        dArr[cArr[i]]++;
+    }
+    for (int i =0; i<cArr.length; i++){
+        System.out.println(i +"의 개수"+dArr[i]);
+    }
     }
 }
