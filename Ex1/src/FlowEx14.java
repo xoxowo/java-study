@@ -21,13 +21,13 @@ public class FlowEx14 {
                            "1100", "1101", "1111"};
         String result = "";
         
-        for (int i =0; i<hex.length; i++){
-            if (hex[i] >= '0' && hex[i] <='9') {
-                result +=binary[hex[i]-'0'];
-            } else {
-                result +=binary[hex[i]-'A'+10];
-            }
-        }
+        // for (int i =0; i<hex.length; i++){
+        //     if (hex[i] >= '0' && hex[i] <='9') {
+        //         result +=binary[hex[i]-'0'];
+        //     } else {
+        //         result +=binary[hex[i]-'A'+10];
+        //     }
+        // }
         System.out.println("hex:" +new String(hex));
         System.out.println("binary:" + result);
 
@@ -40,7 +40,24 @@ public class FlowEx14 {
             System.out.println("src.charAt("+i+")"+ ch);
         }
         char[] chArr = src.toCharArray();
+        
         System.out.println(chArr);
-    }
 
+        // String문자열을 모스부호로 변환하는 예제
+        String source ="SOSHELP";
+        String[] morse = {".-", "-...","-.-","-..",".",
+                            "..-.","--.","....","..",".---",
+                            ".--","--.-",".-.","...","---",
+                            "..-","...-",".--","-..-","-.--",
+                            "--.."};
+
+        String results="";
+
+        for (int i =0; i<source.length(); i++){
+            results+=morse[source.charAt(i)-'A'];
+        }
+        System.out.println("source:"+ source);
+        System.out.println("morse:"+ results);
+
+    }
 }
