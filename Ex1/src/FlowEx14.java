@@ -58,6 +58,11 @@ public class FlowEx14 {
         }
         System.out.println("source:"+ source);
         System.out.println("morse:"+ results);
+        // 사용자로부터 입력받아 출력하기 예제
 
+        System.out.println("매개변수의 개수:"+args.length);
+        for (int i =0; i <args.length; i++){
+            System.out.println("args["+i+"] \""+ args[i] + "\"");
+        }
     }
 }
