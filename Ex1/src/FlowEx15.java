@@ -1,13 +1,13 @@
 public class FlowEx15 {
 
 }
-
-class Tv {
     // Tv 인스턴스 생성 및 사용
+class Tv {
+    // Tv의 속성 (멤버 변수)
     String color;
     boolean power;
     int channel;
-    //메서드 선언 
+    //메서드 선언 (Tv의 기능) 
     //void는 반환하는 return 값이 없는 메서드를 선언할 때 사용
     void power() {power = !power;}
     void channelUp() {++channel;}
@@ -21,5 +21,19 @@ class TvTest {
         t.channel = 9;     // Tv 인스턴스의 맴버변수 channel 의 값을 9로 선언
         t.channelDown();;  // Tv 인스턴스의 메서드 channelDown()을 호출한다.
         System.out.println("현재 채널은" + t.channel + "입니다.");
+    }
+}
+
+class TvTest2 {
+    public static void main(String args[]) {
+        Tv t1 = new Tv();  // 인스턴스 선언과 생성을 동시에 
+        Tv t2 = new Tv();
+        System.out.println("t1의 channel 값은" + t1.channel + "입니다");
+        System.out.println("t1의 channel 값은" + t2.channel + "입니다");
+
+        t1.channel = 6;
+        System.out.println("t1의 channel 값을 6으로 변경하였습니다.");
+        System.out.println("t1의 channel 값은" + t1.channel + "입니다");
+        System.out.println("t1의 channel 값은" + t2.channel + "입니다");
     }
 }
