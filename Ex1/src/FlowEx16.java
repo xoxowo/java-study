@@ -13,7 +13,7 @@ class CardTest {
         System.out.println("Card.height ="+Card.height);
 
         Card c1 = new Card();
-        c1.kind = "Heart";
+        c1.kind = "Heart";   // c1.kind 의 c1은 참조변수 
         c1.number = 1;
 
         Card c2 = new Card();
@@ -23,8 +23,10 @@ class CardTest {
         System.out.println("c1은 "+ c1.kind + "," + c1.number + "이며, 크기는 (" + c1.width + "," + c2.height + ") ");
         System.out.println("c2은 "+ c2.kind + "," + c2.number + "이며, 크기는 (" + c2.width + "," + c2.height + ") ");
         System.out.println("c1의 width와 height를 각 50, 80 으로 변경합니다.");
-        c1.width = 50;
-        c1.height =80;
+
+        c1.width = 50; // 클래스 변수의 값을 변경. 
+        c1.height =80; // 클래스 변수이기 때문에 되도록 '클래스명.변수명' 으로 작성해야한다. Card.width
+
         System.out.println("c1은 "+ c1.kind + "," + c1.number + "이며, 크기는 (" + c1.width + "," + c2.height + ") ");
         System.out.println("c2은 "+ c2.kind + "," + c2.number + "이며, 크기는 (" + c2.width + "," + c2.height + ") ");
     }
