@@ -65,7 +65,5 @@ class TvTest4 {
             tvArr[i].channelUp();
             System.out.printf("tvArr[%d].channel=%d%n",i,tvArr[i].channel);
         }
-
     }
-
 }
