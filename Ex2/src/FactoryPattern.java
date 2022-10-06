@@ -1,4 +1,11 @@
-abstract class Coffee {
+/*
+면접을 위한 cs 전공 지식 노트 예제
+2. Factory pattern 
+    상위 클래스인 객체 생성 부분을 추상화하고, 하위 클래스에서 객체 생성에 대한 구체적인 내용을 결정하는 패턴이다.
+    상위 클래스와 하위 클래스가 분리되어 많은 유연성을 갖게되고, 유지 보수성이 좋다.
+*/
+
+abstract class Coffee {  // 추상화 클래스
     public abstract int getPrice();
 
     @Override
