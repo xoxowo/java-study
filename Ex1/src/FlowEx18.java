@@ -1,14 +1,39 @@
 
 public class FlowEx18 {
-    
 }
-class MyMath {
-    long add(long a, long b) { // a,b 변수 (매개번수)는 여러개 들어갈 수 있지만 리턴 반환값은 1개만 출력된다.
-       // long result = a+b;
-       // return result;
-        return a + b;  // 위 두줄을 <- 한줄로 표시할 수 있다.
+/*
+기본형 매개변수와 참조형 매개변수
+
+기본형 매개변수 변수의 값을 읽기만 할 수 있다. 
+참조형 매개변수 변수의 값을 읽고 변경 할 수 있다.
+ */
+
+class Data {int x;}
+
+class PrimitiveParamEx {
+    public static void main(String[] args) { // 메인 메서드 
+        Data d = new Data();
+        d.x = 10;
+        System.out.println("main() : x = " + d.x); // 1번
+
+        change(d.x); // -> 매서드 호출
+        System.out.println("After change(d.x)"); // 3번
+        System.out.println("main() : x = " + d.x); // 4번
     }
-    long subtract(long a, long b) {return a-b;}
-    long multiply(long a, long b) {return a*b;}
-    double divide(double a, double b) {return a/b;}
- }
+
+    static void change(int x) { // 기본형 매개변수 (only read)
+        x = 1000; //  x 변수는 지역변수 
+        System.out.println("change() : x = " + x); // 2번
+    }
+}
+
+/* 실행 결과값
+
+main() : x = 10
+change() : x = 1000
+After change(d.x)
+main() : x = 10
+
+ */
+>>>>>>> 90edabcffe42e0b3dff9ef80e6624048a3f0383b
+
