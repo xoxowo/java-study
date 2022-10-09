@@ -35,5 +35,3 @@ After change(d.x)
 main() : x = 10
 
  */
->>>>>>> 90edabcffe42e0b3dff9ef80e6624048a3f0383b
-
