@@ -7,7 +7,6 @@ main 메서드가 실행되면 위에서 아래로 차례대로 코드가 수행
 순서대로~ 
  */
 
-
 class CallStackTest2{
     public static void main(String[] args) {
         System.out.println("main(String[] args)이 시작되었음."); // 1번
@@ -15,7 +14,7 @@ class CallStackTest2{
         System.out.println("main(String[] args)이 끝났음."); // 6번
     }
 
-    static void firstMethod() {
+    static void firstMethod() { // 메소드 선언 시 stacit을 선언하면 객체를 생성하지 않고도 메서드를 호출할 수 있다.
         System.out.println("firstMethod()이 시작되었음"); // 2번
         secondMethod(); // 이동 ~
         System.out.println("firstMethod()가 끝났음."); // 5번 firstMethod가 끝나서 다시 main 메서드로 이동

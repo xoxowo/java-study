@@ -16,7 +16,7 @@ class PrimitiveParamEx {
         d.x = 10;
         System.out.println("main() : x = " + d.x); // 1번
 
-        change(d.x); // -> 매서드 호출
+        change(d.x); // -> 매서드 호출 change 메서드로 이동 
         System.out.println("After change(d.x)"); // 3번
         System.out.println("main() : x = " + d.x); // 4번
     }

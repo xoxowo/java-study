@@ -16,16 +16,16 @@ class ReferenceParamEx {
         System.out.println("After change(d)"); // 3번 실행
         System.out.println("main() : x = " + d.x); // 4번 실행 -> main() : x = 1000
     }
-    static void change(Data d) {
-        d.x=1000; // 참조형 매개변수
+    static void change(Data d) { // 참조형 매개변수는 값을 변경 할 수도 있다.
+        d.x=1000;  
         System.out.println("change() : x = " +d.x); // 2번 실행 -> change() : x = 1000
     }
 }
 
-/*  실행 결과값 
+/* FlowEx20.java 실행 결과값 
  
 1번 main() : x = 10
-2번 change() : x = 1000
+2번 change() : x = 1000 
 3번 After change(d)
 4번 main() : x = 1000
 
@@ -36,6 +36,6 @@ class ReferenceParamEx {
 main() : x = 10
 change() : x = 1000
 After change(d.x)
-main() : x = 10
+main() : x = 10 
 
  */
