@@ -5,7 +5,7 @@
     상위 클래스와 하위 클래스가 분리되어 많은 유연성을 갖게되고, 유지 보수성이 좋다.
 */
 
-abstract class Coffee {  // 추상화 클래스
+abstract class Coffee {  // 추상화 클래스 (상위 클래스)
     public abstract int getPrice();
 
     @Override
@@ -14,7 +14,7 @@ abstract class Coffee {  // 추상화 클래스
     }
 }
 
-class CoffeeFactory {
+class CoffeeFactory {  // 하위 클래스 
     public static Coffee getCoffee(String type, int price) {
         if ("Latte".equalsIgnoreCase(type)) return new Latte(price);
         else if ("Americano".equalsIgnoreCase(type)) return new Americano(price);
@@ -24,7 +24,7 @@ class CoffeeFactory {
     }
 }
 
-class DefaultCoffee extends Coffee {
+class DefaultCoffee extends Coffee { // Coffee class 상속
     private int price;
 
     public DefaultCoffee(){

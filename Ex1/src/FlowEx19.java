@@ -9,13 +9,17 @@ main()이 firstMethod()를 호출하고 firstMethod()는 secondMethod()를 호�
  */
 
 class CallStackTest {
-    public static void main(String[] args) {
-        firstMethod();
+    public static void main(String[] args) { // main메서드 호출 1번 실행
+        firstMethod(); // 2번 실행
     }
     static void firstMethod() {
-        secondMethod();
+        secondMethod(); // 3번 실행
     }
     static void secondMethod() {
-        System.out.println("secondMethod()");
+        System.out.println("secondMethod()"); // 4번 실행 
     }
 }
+
+/*
+
+ */
