@@ -12,6 +12,8 @@ interface Observer {
     public void update(); 
 }
 
+// implements 구현은 부모 클래스의 매서드를 재정의하여 구현해야함.
+// 구현은 인터페이스를 기반으로 구현
 class Topic implements Subject {
     private List<Observer> observers;
     private String message;
