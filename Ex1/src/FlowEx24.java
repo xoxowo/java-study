@@ -7,7 +7,7 @@ class ReturnTest{
         ReturnTest r = new ReturnTest();
 
         int result = r.add(3,5); // 변수 선언? 
-        System.out.println(result);
+        System.out.println(result); // 18번째 메서드가 실행된다/
 
         int[] result2 = {0}; // 배열생성 후 result2 의 값을 0 으로 초기화
         r.add(3,5,result2); // void add 메서드로 들어간다.
