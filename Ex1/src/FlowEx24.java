@@ -20,8 +20,8 @@ class ReturnTest{
     }
 
     void add(int a, int b, int[] result) {
-        result[0] = a+b;
-    }
+        result[0] = a+b; // 매개변수로 넘겹갇은 배열에 연산결과를 저장한다. 
+    }                    // 14번째줄에서 프린트 시 result에 저장한 변수값이 출력된다.
 }
 
 /* 실행 결과값
