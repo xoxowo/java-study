@@ -18,7 +18,7 @@ class ReferenceReturnEx {
         System.out.println("d.x ="+d.x);
         System.out.println("d2.x ="+d2.x);
         }
-    static Data copy(Data d) {
+    static Data copy(Data d) { // 매개변수가 data 타입인 메서드 
         Data tmp = new Data();
         tmp.x = d.x;
 
