@@ -27,6 +27,3 @@ class CarTest {
         System.out.println("c2의 차량 color는 "+c2.color+"이며, gearTpye은"+c2.gearType+"고 차량 문은"+c2.door+"개다.");
     }
 }
-
-
-//didhd
