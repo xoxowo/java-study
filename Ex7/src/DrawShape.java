@@ -12,7 +12,7 @@ public class DrawShape {
     }    
 }
 
-class Shape { // 조상 클래스
+class Shape { // 조상 클래스 
     String color = "black";
     void draw() {
         System.out.printf("[color=%s]%n", color);
@@ -34,15 +34,15 @@ class Point {
     }
 }
 
-class Circle extends Shape {
+class Circle extends Shape { // 조상 클래스 Shape 상속하여 Shape 클래스를 사용할 수 있다.
     Point center;
     int r;
 
     Circle() {
         this (new Point(0, 0), 100);
     }
-
-    Circle(Point center, int r) {
+    // 생성자에서 다른 생성자 호출 할 때 this(), this 사용
+    Circle(Point center, int r) { // 매개변수가 있는 생성자
         this.center = center;
         this.r = r;
     }
