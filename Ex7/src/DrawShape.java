@@ -13,18 +13,9 @@ public class DrawShape {
 }
 
 class Shape { // 조상 클래스
-    int x;
-    int y;
-
-    Point(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-    point() {
-        this(0, 0);
-    }
-    String getXY() {
-        return "("+x+","+y+")";
+    String color = "black";
+    void draw() {
+        System.out.printf("[color=%s]%n", color);
     }
 }
 
@@ -56,7 +47,7 @@ class Circle extends Shape {
         this.r = r;
     }
     void draw() {
-        System.out.println("[center=(%d, %d), r= %d, color=%s]%n", center.x, center.y, r, color);
+        System.out.printf("[center=(%d, %d), r= %d, color=%s]%n", center.x, center.y, r, color);
     }
 }
 
@@ -68,6 +59,6 @@ class Triangle extends Shape {
     }
 
     void draw() {
-        System.out.println("[p1=%s, p2=%s, p3=%s, color=%s]%n", p[0].getXY, p[1].getXY, p[2].getXY, color);
+        System.out.printf("[p1=%s, p2=%s, p3=%s, color=%s]%n", p[0].getXY(), p[1].getXY(), p[2].getXY(), color);
     }
 }
