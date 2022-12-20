@@ -1,7 +1,7 @@
 public class BindingTest2 {
     public static void main(String[] args) {
-        Parent p = new Childd();
-        Childd c = new Childd();
+        Parent p = new Child();
+        Child c = new Child();
 
         System.out.println("p.x = " +p.x);
         p.method();
@@ -17,7 +17,7 @@ class Parent {
     }
 }
 
-class Childd extends Parent {}
+class Child extends Parent {}
 
 /* 실행 결과
 p.x = 100
