@@ -23,7 +23,7 @@ class Audio extends Product {
     public String toString() {return "Audio";}
 }
 
-class buyer {
+class Buyer {
     int money = 10000;
     int bonusPoint = 0;
     
@@ -31,8 +31,7 @@ class buyer {
         if (money < p.price) {
             System.out.println("The amount is not enough.");
             return;
-        };
-
+        }
         money -=p.price;
         bonusPoint +=p.bonusPoint;
         System.out.println(p + "을/를 구입하셨습니다.");
@@ -41,11 +40,18 @@ class buyer {
 
 class PolyArgumentTest {
     public static void main(String[] args) {
-        buyer b = new buyer();
-        b.buy(new Tv());
+        Buyer b = new Buyer();
+        b.buy(new Computer());
         b.buy(new Audio());
         
         System.out.println("현재 남은 금액은 "+b.money+"입니다.");
         System.out.println("현재 보유하신 보너스포인트는 "+b.bonusPoint+"입니다.");
     }
 }
+
+/* 실행 결과
+The amount is not enough.
+Audio을/를 구입하셨습니다.
+현재 남은 금액은 7000입니다.
+현재 보유하신 보너스포인트는 600입니다.
+ */

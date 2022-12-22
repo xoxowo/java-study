@@ -16,8 +16,7 @@ class CaptionTv extends Tv {
         }
     }
 }
-
-public class TvTest {
+class TvTest {
     public static void main(String[] args) {
         CaptionTv ctv = new CaptionTv() ; // 초기화 및 선언
         ctv.channel = 10; // CaptionTv 클래스는 Tv 클래스를 상속받았기 때문에 tv 클래스의 채널을 사용할 수 있음
