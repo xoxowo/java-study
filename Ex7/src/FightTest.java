@@ -1,6 +1,17 @@
 class FightTest {
     public static void main(String[] args) {
-        
+        Fighter f = new Fighter();
+        //instanceof 연산자 조건문에 보통 사용되며 형변환이 가능한지 확인 
+        if (f instanceof Unit) 
+            System.out.println("f는 Unit클래스의 자손입니다.");
+        if (f instanceof Fightable)
+            System.out.println("F는 Fightable 인터페이스를 구현했습니다.");
+        if (f instanceof Movable)
+            System.out.println("F는 Movable 인터페이스를 구현했습니다.");
+        if (f instanceof Attackable)
+            System.out.println("F는 Attackable 인터페이스를 구현했습니다.");
+        if (f instanceof Object)
+            System.out.println("f는 Object클래스의 자손입니다.");
     }    
 }
 class Fighter extends Unit implements Fightable {
