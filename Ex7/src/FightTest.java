@@ -27,3 +27,11 @@ class Unit {
 interface Fightable extends Movable, Attackable {}
 interface Movable {void move(int x, int y);}//인터페이스 내부 메서드는 모두 public abstract 이기 때문에 생략가능.
 interface Attackable {void attact(Unit u);}
+
+/* 실행 결과
+f는 Unit클래스의 자손입니다.
+F는 Fightable 인터페이스를 구현했습니다. 
+F는 Movable 인터페이스를 구현했습니다.   
+F는 Attackable 인터페이스를 구현했습니다.
+f는 Object클래스의 자손입니다.
+ */
