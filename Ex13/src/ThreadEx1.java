@@ -7,14 +7,13 @@ class ThreadEx1 {
 
         t1.start();
         t2.start();
-    
     }
 }
 
 class ThreadEx1_1 extends Thread {
     public void run() {
         for (int i = 0; i <5; i++) {
-            System.out.println(getName());
+            System.out.println(getName()); // 조상인 Thread의 getName()을 호출
         }
     }
 }
@@ -24,7 +23,7 @@ class ThreadEx1_2 implements Runnable {
         for (int i = 0; i <5; i++) {
             //Thread.currentThread() 현재 실행중인 Thread를 반환
             System.out.println(Thread.currentThread().getName());
-        }
+        }	
     }
 }
 
